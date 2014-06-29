@@ -1,0 +1,242 @@
+/* load the default Redmine stylesheet */
+@import url(../../../stylesheets/application.css);
+
+// Open Sans
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+
+$gray-dark: #202020;
+$gray-text: #484848;
+$hotpink: #d92e47;
+
+@import "compass";
+@import "partials/formalize";
+@import "partials/tables";
+
+body {
+  font: normal 14px/1.5 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: $gray-text;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+a, a:link, a:visited {
+  color: $hotpink;
+  @include transition(color .5s);
+  &:hover {
+    text-decoration: none;
+    color: lighten($hotpink, 25%);
+  }
+  th & {
+    color: $gray-text;
+  }
+}
+
+th {
+  font-weight: 300;
+}
+
+// Top menu bar
+#top-menu {
+  background: lighten($gray-dark, 5%);
+  height: auto;
+  @include pie-clearfix;
+  border-bottom: 1px solid lighten($gray-dark, 10%);
+  li {
+    padding: 0 10px;
+    a {
+      font-weight: normal;
+      line-height: 2.5;
+    }
+  }
+  #loggedas {
+    line-height: 2.5;
+  }
+}
+
+// Header
+#header {
+  height: auto;
+  min-height: 4em;
+  background: $gray-dark;
+  padding: 14px 17px 0 17px;
+  > h1,
+  &:before {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px 10px 9px;
+  }
+  &:before {
+    content: url('../images/logo.png');
+  }
+}
+
+// Search box
+#quick-search {
+  select {
+    padding: 5px 15px 5px 5px;
+    height: auto;
+    margin-left: 8px;
+  }
+  input {
+    background: lighten($gray-dark, 5%);
+    border: none;
+    color: #FFF;
+    padding: 15px 6px;
+    margin-left: 4px;
+    display: inline-block;
+  }
+  label {
+    line-height: 2.1;
+  }
+}
+
+// Menu
+#main-menu {
+  position: relative;
+  left: 0;
+  @include pie-clearfix;
+  li {
+    a {
+      font-weight: 300;
+      border-top: 3px solid $gray-dark;
+      padding: 4px 15px 7px;
+      @include transition(border-color .5s);
+      &.selected,
+      &:hover {
+        border-top: 3px solid $hotpink;
+        background: transparent;
+      }
+      &.selected {
+        font-weight: 400;
+        background: #fff;
+      }
+    }
+  }
+}
+
+// Content
+#main {
+  @include pie-clearfix;
+}
+#content {
+  width: 75%;
+  padding: 15px 20px 10px;
+  @include box-sizing(border-box);
+}
+
+#sidebar {
+  width: 22%;
+  margin-left: 3%;
+  h3 {
+    margin-top: 23px;
+  }
+}
+
+div.issue {
+  background: #f4f4f4;
+  border: none;
+  padding: 3px 15px;
+}
+
+.subject h3 {
+  font-size: 26px;
+  line-height: 2;
+}
+
+// Messages
+#errorExplanation, div.flash, .nodata, .warning, .conflict {
+  border: 1px solid;
+  padding: 2px 4px 3px 30px;
+}
+
+// Update issue
+#update {
+  position: fixed;
+  width: 80%;
+  max-width: 800px;
+  max-height: 80%;
+  overflow: auto;
+  background: #FFF;
+  padding: 10px 20px 15px;
+  box-shadow: 0 0 40px rgba(black, .5);
+  margin-left: -40%;
+  left: 50%;
+  top: 10%;
+  z-index: 20;
+  @media (min-width: 1000px) {
+    margin-left: -400px;
+  }
+  .update-close {
+    float: right;
+    border: 1px solid $gray-text;
+    line-height: 0.5;
+    font-size: 25px;
+    padding: 0 1px 6px;
+    font-weight: 300;
+    margin-right: -10px;
+    cursor: pointer;
+    @include transition(all .5s);
+    &:hover {
+      background-color: $gray-text;
+      color: #fff;
+    }
+  }
+  fieldset.tabular {
+    legend {
+      cursor: pointer;
+      color: $hotpink;
+      @include transition(color .5s);
+      &:hover {
+        color: lighten($hotpink, 25%);
+      }
+    }
+    legend small,
+    div,
+    p {
+      display: none;
+    }
+    &.show-children {
+      legend small {
+        display: inline;
+      }
+      div,
+      p {
+        display: block;
+      }
+    }
+  }
+}
+input#issue_subject,
+input#time_entry_comments,
+.tabular textarea {
+  width: 98.4%;
+  max-width: 99%;
+}
+select#time_entry_activity_id {
+  width: 95.7%;
+}
+#attachments_fields {
+  span {
+    white-space: initial;
+  }
+  input {
+    width: 30%;
+    & + input.description,
+    & + label {
+      width: 60%;
+      @media (max-width: 700px) {
+        display: block;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// Issue list
+table.query-columns td.buttons input[type=button] {
+  padding: 0;
+}
