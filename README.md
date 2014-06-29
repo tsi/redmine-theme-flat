@@ -7,7 +7,7 @@ Flat theme for Redmine
 
 ## Installation
 
-1. [Download]() the theme to `redmine/public/theme/`
+1. [Download](https://github.com/tsi/redmine-theme-flat/archive/master.zip) the theme to `redmine/public/theme/`
 2. Open redmine in a browser and go to Administration > Settings > Display > Theme.
 
 ## Make it yours
