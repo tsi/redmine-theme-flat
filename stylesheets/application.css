@@ -567,6 +567,7 @@ th {
 #main-menu {
   position: relative;
   left: 0;
+  margin-right: 0;
   *zoom: 1;
 }
 #main-menu:after {
