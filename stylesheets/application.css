@@ -556,7 +556,8 @@ th {
   background: #2d2d2d;
   border: none;
   color: #FFF;
-  padding: 15px 6px;
+  padding: 0px 6px;
+  height: 2.4em;
   margin-left: 4px;
   display: inline-block;
 }
