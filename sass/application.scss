@@ -64,11 +64,13 @@ th {
   background: $gray-dark;
   padding: 14px 17px 0 17px;
   > h1,
-  &:before {
+  > h1:before {
     display: inline-block;
-    content: url('../images/logo.png');
     vertical-align: middle;
     margin: 0 20px 10px 9px;
+  }
+  > h1:before {
+    content: url('../images/logo.png');
   }
 }
 
