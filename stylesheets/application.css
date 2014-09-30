@@ -538,13 +538,17 @@ th {
   background: #202020;
   padding: 14px 17px 0 17px;
 }
-#header > h1, #header:before {
+#header > h1,
+#header > h1:before {
   display: inline-block;
-  vertical-align: middle;
-  margin: 0 20px 10px 9px;
 }
-#header:before {
+#header > h1 {
+  margin: 0 20px 2px 9px;
+}
+#header > h1:before {
   content: url("../images/logo.png");
+  vertical-align: middle;
+  margin: 0 29px 0 0;
 }
 
 #quick-search select {
