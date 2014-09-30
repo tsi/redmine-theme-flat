@@ -66,11 +66,9 @@ th {
   > h1,
   &:before {
     display: inline-block;
+    content: url('../images/logo.png');
     vertical-align: middle;
     margin: 0 20px 10px 9px;
-  }
-  &:before {
-    content: url('../images/logo.png');
   }
 }
 
