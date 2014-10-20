@@ -225,6 +225,23 @@ input[type="url"], .box
 input[type="week"] {
   border: 1px solid #DDD;
 }
+fieldset#filters td.values textarea, fieldset#filters td.values
+select, fieldset#filters td.values
+input[type="date"], fieldset#filters td.values
+input[type="datetime"], fieldset#filters td.values
+input[type="datetime-local"], fieldset#filters td.values
+input[type="email"], fieldset#filters td.values
+input[type="month"], fieldset#filters td.values
+input[type="number"], fieldset#filters td.values
+input[type="password"], fieldset#filters td.values
+input[type="search"], fieldset#filters td.values
+input[type="tel"], fieldset#filters td.values
+input[type="text"], fieldset#filters td.values
+input[type="time"], fieldset#filters td.values
+input[type="url"], fieldset#filters td.values
+input[type="week"] {
+  height: 1.8em;
+}
 
 button[disabled],
 input[disabled],

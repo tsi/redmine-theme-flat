@@ -178,6 +178,9 @@ input[type="week"] {
   .box & {
     border: 1px solid #DDD;
   }
+  fieldset#filters td.values & {
+    height: 1.8em;
+  }
 }
 
 button[disabled],
