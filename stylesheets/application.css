@@ -1,6 +1,6 @@
-/* load the default Redmine stylesheet */
 @import url(../../../stylesheets/application.css);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+/* load the default Redmine stylesheet */
 .input_tiny {
   width: 50px;
 }
@@ -43,9 +43,9 @@ button,
 a.button,
 select,
 textarea {
+  -webkit-transition: box-shadow 0.5s;
   -moz-transition: box-shadow 0.5s;
   -o-transition: box-shadow 0.5s;
-  -webkit-transition: box-shadow 0.5s;
   transition: box-shadow 0.5s;
 }
 input:invalid,
@@ -53,8 +53,8 @@ button:invalid,
 a.button:invalid,
 select:invalid,
 textarea:invalid {
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
 }
 input:focus,
@@ -62,8 +62,8 @@ button:focus,
 a.button:focus,
 select:focus,
 textarea:focus {
-  -moz-box-shadow: #81c2dc 0 0 5px 0;
   -webkit-box-shadow: #81c2dc 0 0 5px 0;
+  -moz-box-shadow: #81c2dc 0 0 5px 0;
   box-shadow: #81c2dc 0 0 5px 0;
   z-index: 1;
 }
@@ -73,8 +73,8 @@ input[type="radio"]:focus,
 input[type="radio"]:active,
 input[type="checkbox"]:focus,
 input[type="checkbox"]:active {
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
 }
 
@@ -84,9 +84,8 @@ input[type="reset"],
 input[type="submit"],
 input[type="button"] {
   -webkit-appearance: none;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   background: #d92e47;
   border: none;
@@ -103,9 +102,9 @@ input[type="button"] {
   text-decoration: none;
   vertical-align: top;
   width: auto;
+  -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   *padding-top: 2px;
   *padding-bottom: 0;
@@ -164,15 +163,16 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
   -webkit-appearance: none;
   background-color: white;
@@ -233,8 +233,8 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled],
 a.button_disabled {
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
   -moz-user-select: -moz-none;
   -webkit-user-select: none;
@@ -382,101 +382,114 @@ optgroup::-moz-focus-inner {
   background: #eeeeee;
 }
 
-tr.odd.priority-5, table.list tbody tr.odd.priority-5:hover {
+tr.odd.priority-highest,
+table.list tbody tr.odd.priority-highest:hover {
   color: #900;
   font-weight: bold;
 }
 
-tr.odd.priority-5 {
+tr.odd.priority-highest {
   background: #ffc4c4;
 }
 
-tr.even.priority-5, table.list tbody tr.even.priority-5:hover {
+tr.even.priority-highest,
+table.list tbody tr.even.priority-highest:hover {
   color: #900;
   font-weight: bold;
 }
 
-tr.even.priority-5 {
+tr.even.priority-highest {
   background: #ffd4d4;
 }
 
-tr.priority-5 a, tr.priority-5:hover a {
+tr.priority-highest a,
+tr.priority-highest:hover a {
   color: #900;
 }
 
-tr.odd.priority-5 td, tr.even.priority-5 td {
+tr.odd.priority-highest td,
+tr.even.priority-highest td {
   border-color: #ffb4b4;
 }
 
-tr.odd.priority-4, table.list tbody tr.odd.priority-4:hover {
+tr.odd.priority-high2,
+table.list tbody tr.odd.priority-high2:hover {
   color: #900;
 }
 
-tr.odd.priority-4 {
+tr.odd.priority-high2 {
   background: #ffc4c4;
 }
 
-tr.even.priority-4, table.list tbody tr.even.priority-4:hover {
+tr.even.priority-high2,
+table.list tbody tr.even.priority-high2:hover {
   color: #900;
 }
 
-tr.even.priority-4 {
+tr.even.priority-high2 {
   background: #ffd4d4;
 }
 
-tr.priority-4 a {
+tr.priority-high2 a {
   color: #900;
 }
 
-tr.odd.priority-4 td, tr.even.priority-4 td {
+tr.odd.priority-high2 td,
+tr.even.priority-high2 td {
   border-color: #ffb4b4;
 }
 
-tr.odd.priority-3, table.list tbody tr.odd.priority-3:hover {
+tr.odd.priority-high3,
+table.list tbody tr.odd.priority-high3:hover {
   color: #900;
 }
 
-tr.odd.priority-3 {
+tr.odd.priority-high3 {
   background: #fee;
 }
 
-tr.even.priority-3, table.list tbody tr.even.priority-3:hover {
+tr.even.priority-high3,
+table.list tbody tr.even.priority-high3:hover {
   color: #900;
 }
 
-tr.even.priority-3 {
+tr.even.priority-high3 {
   background: #fff2f2;
 }
 
-tr.priority-3 a {
+tr.priority-high3 a {
   color: #900;
 }
 
-tr.odd.priority-3 td, tr.even.priority-3 td {
+tr.odd.priority-high3 td,
+tr.even.priority-high3 td {
   border-color: #fcc;
 }
 
-tr.odd.priority-1, table.list tbody tr.odd.priority-1:hover {
+tr.odd.priority-lowest,
+table.list tbody tr.odd.priority-lowest:hover {
   color: #559;
 }
 
-tr.odd.priority-1 {
+tr.odd.priority-lowest {
   background: #eaf7ff;
 }
 
-tr.even.priority-1, table.list tbody tr.even.priority-1:hover {
+tr.even.priority-lowest,
+table.list tbody tr.even.priority-lowest:hover {
   color: #559;
 }
 
-tr.even.priority-1 {
+tr.even.priority-lowest {
   background: #f2faff;
 }
 
-tr.priority-1 a {
+tr.priority-lowest a {
   color: #559;
 }
 
-tr.odd.priority-1 td, tr.even.priority-1 td {
+tr.odd.priority-lowest td,
+tr.even.priority-lowest td {
   border-color: #add7f3;
 }
 
@@ -493,9 +506,9 @@ h1, h2, h3, h4 {
 
 a, a:link, a:visited {
   color: #d92e47;
+  -webkit-transition: color 0.5s;
   -moz-transition: color 0.5s;
   -o-transition: color 0.5s;
-  -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
 a:hover, a:link:hover, a:visited:hover {
@@ -580,9 +593,9 @@ th {
   font-weight: 300;
   border-top: 3px solid #202020;
   padding: 4px 15px 7px;
+  -webkit-transition: border-color 0.5s;
   -moz-transition: border-color 0.5s;
   -o-transition: border-color 0.5s;
-  -webkit-transition: border-color 0.5s;
   transition: border-color 0.5s;
 }
 #main-menu li a.selected, #main-menu li a:hover {
@@ -606,8 +619,8 @@ th {
 #content {
   width: 75%;
   padding: 15px 20px 10px;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -663,9 +676,9 @@ div.issue {
   font-weight: 300;
   margin-right: -10px;
   cursor: pointer;
+  -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 #update .update-close:hover {
@@ -675,9 +688,9 @@ div.issue {
 #update fieldset.tabular legend {
   cursor: pointer;
   color: #d92e47;
+  -webkit-transition: color 0.5s;
   -moz-transition: color 0.5s;
   -o-transition: color 0.5s;
-  -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
 #update fieldset.tabular legend:hover {
