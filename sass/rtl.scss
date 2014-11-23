@@ -1,0 +1,64 @@
+/* load the default Redmine stylesheet */
+@import url(../../../stylesheets/rtl.css);
+
+$gray-dark: #202020;
+$gray-text: #484848;
+$hotpink: #d92e47;
+
+@import "compass";
+@import "partials/formalize-rtl";
+@import "partials/tables-rtl";
+
+
+// Header
+#header {
+  padding:14px 17px 0 17px;
+  > h1 {margin:0 9px 2px 20px;}
+  > h1:before {margin:0 0 0 29px;}
+}
+
+// Search box
+#quick-search {
+  select {padding:5px 5px 5px 15px; margin-left:0px; margin-right:8px;}
+  input {margin-left:0px; margin-right:4px;}
+}
+
+// Menu
+#main-menu {
+  left:auto; right:0;
+  margin-right: 0; margin-left:0;
+}
+
+// Content
+#sidebar {
+  margin-left:0%; margin-right:3%;
+}
+
+// Messages
+#errorExplanation, div.flash, .nodata, .warning, .conflict {
+  padding: 2px 30px 3px 4px;
+}
+
+// Update issue
+#update {
+  margin-left:0%; margin-right:-40%;
+  left:auto; right:50%;
+  @media (min-width: 1000px) {
+	margin-left:0px; margin-right:-400px;
+  }
+  .update-close {
+	float:left;
+	margin-right:0px; margin-left: -10px;
+  }
+}
+
+#attachments_fields {
+  input {
+	& + input.description,
+	& + label {
+	  @media (max-width: 700px) {
+		margin-left:0; margin-right:0;
+	  }
+	}
+  }
+}

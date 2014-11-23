@@ -1,0 +1,105 @@
+/* load the default Redmine stylesheet */
+@import url(../../../stylesheets/rtl.css);
+.input_full_wrap {
+  padding-right: 0px;
+  padding-left: 8px;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  text-align: right;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select[size],
+  select[multiple],
+  select[multiple][size] {
+    padding-right: 0px;
+    padding-left: 3px;
+  }
+
+  select,
+  select[size="0"],
+  select[size="1"] {
+    background-position: 5px center;
+    padding-right: 0px;
+    padding-left: 20px;
+  }
+
+  ::-webkit-validation-bubble-message {
+    background: -webkit-gradient(linear, right top, right bottom, color-stop(0, #666666), color-stop(1, black));
+  }
+}
+#header {
+  padding: 14px 17px 0 17px;
+}
+#header > h1 {
+  margin: 0 9px 2px 20px;
+}
+#header > h1:before {
+  margin: 0 0 0 29px;
+}
+
+#quick-search select {
+  padding: 5px 5px 5px 15px;
+  margin-left: 0px;
+  margin-right: 8px;
+}
+#quick-search input {
+  margin-left: 0px;
+  margin-right: 4px;
+}
+
+#main-menu {
+  left: auto;
+  right: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#sidebar {
+  margin-left: 0%;
+  margin-right: 3%;
+}
+
+#errorExplanation, div.flash, .nodata, .warning, .conflict {
+  padding: 2px 30px 3px 4px;
+}
+
+#update {
+  margin-left: 0%;
+  margin-right: -40%;
+  left: auto;
+  right: 50%;
+}
+@media (min-width: 1000px) {
+  #update {
+    margin-left: 0px;
+    margin-right: -400px;
+  }
+}
+#update .update-close {
+  float: left;
+  margin-right: 0px;
+  margin-left: -10px;
+}
+
+@media (max-width: 700px) {
+  #attachments_fields input + input.description, #attachments_fields input + label {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
