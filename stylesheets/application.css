@@ -1,6 +1,6 @@
+/* load the default Redmine stylesheet */
 @import url(../../../stylesheets/application.css);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
-/* load the default Redmine stylesheet */
 .input_tiny {
   width: 50px;
 }
@@ -43,9 +43,9 @@ button,
 a.button,
 select,
 textarea {
-  -webkit-transition: box-shadow 0.5s;
   -moz-transition: box-shadow 0.5s;
   -o-transition: box-shadow 0.5s;
+  -webkit-transition: box-shadow 0.5s;
   transition: box-shadow 0.5s;
 }
 input:invalid,
@@ -53,8 +53,8 @@ button:invalid,
 a.button:invalid,
 select:invalid,
 textarea:invalid {
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 input:focus,
@@ -62,8 +62,8 @@ button:focus,
 a.button:focus,
 select:focus,
 textarea:focus {
-  -webkit-box-shadow: #81c2dc 0 0 5px 0;
   -moz-box-shadow: #81c2dc 0 0 5px 0;
+  -webkit-box-shadow: #81c2dc 0 0 5px 0;
   box-shadow: #81c2dc 0 0 5px 0;
   z-index: 1;
 }
@@ -73,8 +73,8 @@ input[type="radio"]:focus,
 input[type="radio"]:active,
 input[type="checkbox"]:focus,
 input[type="checkbox"]:active {
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -84,8 +84,9 @@ input[type="reset"],
 input[type="submit"],
 input[type="button"] {
   -webkit-appearance: none;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background: #d92e47;
   border: none;
@@ -102,9 +103,9 @@ input[type="button"] {
   text-decoration: none;
   vertical-align: top;
   width: auto;
-  -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   *padding-top: 2px;
   *padding-bottom: 0;
@@ -163,16 +164,15 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
+  -webkit-border-radius: 0;
   border-radius: 0;
   -webkit-appearance: none;
   background-color: white;
@@ -250,8 +250,8 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled],
 a.button_disabled {
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   -moz-user-select: -moz-none;
   -webkit-user-select: none;
@@ -348,7 +348,7 @@ optgroup::-moz-focus-inner {
 .ie6_button,
 * html button,
 * html a.button {
-  background: #dddddd url('/images/button.png?1382606282') repeat-x;
+  background: #dddddd url('/images/button.png?1424680612') repeat-x;
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
@@ -523,9 +523,9 @@ h1, h2, h3, h4 {
 
 a, a:link, a:visited {
   color: #d92e47;
-  -webkit-transition: color 0.5s;
   -moz-transition: color 0.5s;
   -o-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
 a:hover, a:link:hover, a:visited:hover {
@@ -614,9 +614,9 @@ th {
   font-weight: 300;
   border-top: 3px solid #202020;
   padding: 4px 15px 7px;
-  -webkit-transition: border-color 0.5s;
   -moz-transition: border-color 0.5s;
   -o-transition: border-color 0.5s;
+  -webkit-transition: border-color 0.5s;
   transition: border-color 0.5s;
 }
 #main-menu li a.selected, #main-menu li a:hover {
@@ -640,8 +640,8 @@ th {
 #content {
   width: 75%;
   padding: 15px 20px 10px;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -697,9 +697,9 @@ div.issue {
   font-weight: 300;
   margin-right: -10px;
   cursor: pointer;
-  -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 #update .update-close:hover {
@@ -709,9 +709,9 @@ div.issue {
 #update fieldset.tabular legend {
   cursor: pointer;
   color: #d92e47;
-  -webkit-transition: color 0.5s;
   -moz-transition: color 0.5s;
   -o-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
 #update fieldset.tabular legend:hover {
@@ -759,4 +759,8 @@ select#time_entry_activity_id {
 
 table.query-columns td.buttons input[type=button] {
   padding: 0;
+}
+
+select[multiple="multiple"] {
+  height: auto !important;
 }

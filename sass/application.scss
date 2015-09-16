@@ -245,3 +245,8 @@ select#time_entry_activity_id {
 table.query-columns td.buttons input[type=button] {
   padding: 0;
 }
+
+// Filters
+select[multiple="multiple"] {
+  height: auto !important;
+}
