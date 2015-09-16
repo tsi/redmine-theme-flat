@@ -1,6 +1,6 @@
 /* load the default Redmine stylesheet */
-@import url(../../../stylesheets/application.css);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+@import url("../../../stylesheets/application.css");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800");
 .input_tiny {
   width: 50px;
 }
