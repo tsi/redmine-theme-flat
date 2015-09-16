@@ -540,6 +540,13 @@ th {
   font-weight: 300;
 }
 
+code {
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  background-color: #fafafa;
+  border: 1px solid #e2e2e2;
+}
+
 #top-menu {
   background: #2d2d2d;
   height: auto;
