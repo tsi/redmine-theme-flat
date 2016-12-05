@@ -626,6 +626,14 @@ code {
   -webkit-transition: border-color 0.5s;
   transition: border-color 0.5s;
 }
+#main-menu li a.new-object {
+  background-color: #4f4f4f;
+}
+#main-menu li ul.menu-children a:hover {
+  border-top: 3px solid #d92e47;
+  background-color: #f9f9f9;
+  color: #555
+}
 #main-menu li a.selected, #main-menu li a:hover {
   border-top: 3px solid #d92e47;
   background: transparent;
